@@ -1,6 +1,7 @@
 ﻿using BarberShop.Communication.Enums;
 using BarberShop.Communication.Request;
 using BarberShop.Communication.Responses;
+using BarberShop.Exception.ExceptionsBase;
 
 namespace BarberShop.Application.UseCases.Invoices.Register
 {
@@ -21,7 +22,7 @@ namespace BarberShop.Application.UseCases.Invoices.Register
             {
                 var errorMessages = result.Errors.Select(x => x.ErrorMessage).ToList();
 
-
+                throw new ErrorOnValidationException(errorMessages);
             }
         }
     }
