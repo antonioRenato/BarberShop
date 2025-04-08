@@ -17,6 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\BarberShop.Application\BarberShop.Application.csproj" />
+    <ProjectReference Include="..\..\src\BarberShop.Communication\BarberShop.Communication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
 
