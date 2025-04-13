@@ -9,6 +9,7 @@ namespace BarberShop.Application.UseCases.Invoices.Register
     {
         public ResponseInvoiceJson Execute(RequestInvoiceJson request) 
         {
+            Validate(request);
             return new ResponseInvoiceJson();
         }
 
